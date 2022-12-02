@@ -10,14 +10,14 @@ def points(my_hand, outcome):
     return points_hand[my_hand] + points_outcome[outcome] 
 
 def points1(input_a, input_b):
-    my_hand = 'XYZ'.index(input_b)
     other_hand = 'ABC'.index(input_a)
+    my_hand = 'XYZ'.index(input_b)
     outcome = (my_hand - other_hand) % 3
     return points(my_hand, outcome)
 
 def points2(input_a, input_b):
-    outcome = {'X': LOSE, 'Y': DRAW, 'Z': WIN}[input_b]
     other_hand = 'ABC'.index(input_a)
+    outcome = {'X': LOSE, 'Y': DRAW, 'Z': WIN}[input_b]
     my_hand = (other_hand + outcome) % 3
     return points(my_hand, outcome)
 
