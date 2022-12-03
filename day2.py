@@ -21,8 +21,8 @@ def points2(input_a, input_b):
     my_hand = (other_hand + outcome) % 3
     return points(my_hand, outcome)
 
-part1 = sum(points1(input_a, input_b) for input_a, input_b in strategy)
-part2 = sum(points2(input_a, input_b) for input_a, input_b in strategy)
+part1 = sum(points1(*pair) for pair in strategy)
+part2 = sum(points2(*pair) for pair in strategy)
 
 print('Part 1:', part1)
 print('Part 2:', part2)
