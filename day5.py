@@ -1,5 +1,4 @@
 import re
-from collections import namedtuple
 from copy import deepcopy
 
 stacks = []
@@ -30,7 +29,6 @@ part1 = ''.join(stack[-1] if stack else '' for stack in stacks1)
 
 stacks2 = move(stacks, instructions, reverse=False)
 part2 = ''.join(stack[-1] if stack else '' for stack in stacks2)
-
 
 print('Part 1:', part1)
 print('Part 2:', part2)
