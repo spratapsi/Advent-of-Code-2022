@@ -1,12 +1,9 @@
-import itertools as it
-
 with open('day6.in') as file:
-    signal = next(iter(file)).strip()
+    signal = file.read().strip()
 
 def first_unique(signal, k):
-    for i in it.count():
-        characters = set(signal[i:i+k])
-        if len(characters) == k:
+    for i in range(len(signal)):
+        if len(set(signal[i:i+k])) == k:
             return i + k
 
 part1 = first_unique(signal, 4)
